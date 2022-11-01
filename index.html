@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>
+            Add to Cart
+        </title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1>WELCOME TO SUNSHINE MART</h1>
+        <div class="back">
+            
+            <div class="left">
+                <h2>Available items</h2>
+                <div class="dets">
+                    <h3>Fruits</h3>
+                    <div class="buttons">
+                        <button onclick="increasef()">+</button>
+                        <button onclick="decreasef()">-</button>
+                        <p id="printf"></p>
+                    </div>
+                </div>
+               <br><br><br>
+                <div class="dets">
+                    <h3>Vegetables</h3>
+                    <div class="buttons">
+                        <button onclick="increasev()">+</button>
+                        <button onclick="decreasev()">-</button>
+                        <p id="printv"></p>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="dets">
+                    <h3>Soap</h3>
+                    <div class="buttons">
+                        <button onclick="increases()">+</button>
+                        <button onclick="decreases()">-</button>
+                        <p id="prints"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="box">
+                    <h2>CART</h2>
+                    <div class="text">
+                        <p>Total items : </p>
+                        <p id="number"></p>
+                    </div>
+                    <button onclick="calculate()">COMPUTE BILL</button>
+                </div>
+
+                <div class="box">
+                    <h2>BILL</h2>
+                    <div class="text">
+                        <p>FRUITS : </p>
+                        <p id="ff"></p>
+                    </div>
+                    <div class="text">
+                        <p>VEGETABLES : </p>
+                        <p id="vv"></p>
+                    </div>
+                    <div class="text">
+                        <p>SOAPS : </p>
+                        <p id="ss"></p>
+                    </div>
+                    <div class="text">
+                        <p>Total Bill : </p>
+                        <p id="bb"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var fruit=0;
+            var vege=0;
+            var soaps=0;
+            document.getElementById("printf").innerText = fruit;
+            document.getElementById("printv").innerText = vege;
+            document.getElementById("prints").innerText = soaps;
+
+            function increasef()
+            {
+                fruit++;
+                totali();
+                document.getElementById("printf").innerText = fruit;
+            }
+
+            function decreasef()
+            {
+                if(fruit!=0)
+                fruit--;
+                totali();
+                document.getElementById("printf").innerText = fruit;
+            }
+
+            function increasev()
+            {
+                vege++;
+                totali();
+                document.getElementById("printv").innerText =vege;
+            }
+
+            function decreasev()
+            {
+                if(vege!=0)
+                vege--;
+                totali();
+                document.getElementById("printv").innerText = vege;
+            }
+
+            function increases()
+            {
+                soaps++;
+                totali();
+                document.getElementById("prints").innerText = soaps;
+            }
+
+            function decreases()
+            {
+                if(soap!=0)
+                soaps--;
+                totali();
+                document.getElementById("prints").innerText = soaps;
+            }
+            function totali()
+            {
+                var total=vege+fruit+soaps;
+                document.getElementById("number").innerText = total;
+            }
+            
+            var bill=0;
+            document.getElementById("bb").innerText = bill;
+            function calculate()
+            {
+                var total=fruit+vege+soaps;
+            document.getElementById("number").innerText = total;
+            document.getElementById("ff").innerText = fruit;
+            document.getElementById("vv").innerText = vege;
+            document.getElementById("ss").innerText = soaps;
+                bill=bill+30*fruit+50*vege+40*soaps;
+                document.getElementById("bb").innerText = bill;
+            }
+            
+        </script>
+    </body>
+</html>

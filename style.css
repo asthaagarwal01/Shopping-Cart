@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body
+{
+    background-color: wheat;
+}
+
+.back
+{
+    display: flex;
+}
+
+h1
+{
+    color: red;
+    padding: 30px;
+    text-align: center;
+}
+
+.left
+{
+    width: 50%;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.left h2
+{
+    padding: 20px;
+}
+
+.dets h3
+{
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.buttons
+{
+    display: flex;
+
+}
+
+button
+{
+    background-color: rgb(16, 176, 171);
+    padding: 5px 10px;
+    color: white;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dets p
+{
+    margin: 20px;
+    font-size: 18px;
+}
+
+.right
+{
+    width: 50%;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.box
+{
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    border: 1px black dashed;
+    width: 500px;
+}
+
+.box .text
+{
+    display: flex;
+}
+
+.text p
+{
+    padding: 20px;
+}
